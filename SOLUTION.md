@@ -1,1 +1,43 @@
 
+PROJECTS
+The solution (VehicleTrackingSystem.sln) includes the following 6 projects. All the class libraries and WebAPI project were developed in ASP Net Core.
+CommonLibrary: The class library that includes common classes such as FileService, extension methods, constants etc. It is used in both DBAccessLibrary and WebAPI.
+
+CoreEntity: The class library that includes BaseEntity, BaseNamedEntity classes and some generic interfaces and classes for repositories.
+
+SQLDBProject: It defines the DB schema for SQL Server. It needs to be published. SQLDBProject.publish.xml defines the connection string. I used local db with sa user. This may need to be changed. If changed, the connection string in SQLDBProject.publish.xml should be changed and the project should be published again. when published, postscript file automatically deletes all the existent records and creates 5 pre-defined categories and 6 manifactures. The DB schema includes all the required indexes and foreign keys, views, computed fields etc.
+
+DBAccessLibrary: All the project-specific entity classes, corresponding DTO classes, automap settings etc. are defined here.
+
+WebAPI: Rest web service that offers all the endpoints for the client application to use.
+
+client: React project. This project should be opened in VS code.
+
+INSTALLATION
+-Open VehicleTrackingSystem.sln in Visual Studio 2019 or in a later version.
+-Build all the projects.
+-Create the database by publishing the SQLDBProject.
+-Run the WebAPI project.
+-Open client folder in VS Code.
+-run "npm install" command in terminal.
+-run the client project with "npm start"
+
+WHAT THE CLIENT DOES
+-List, create, delete, update vehicles, categories and manifacturers.
+-Check for all the required constraint. Most important constraints are,
+  --Duplicate names are not allowed
+  --Duplicate minimum weights of categories are not allowed.
+  --Deleting a manifacturer related to a vehicle record is not allowed.
+  --Inserting/Updating a vehicle/category record with weight/min weight above 1000000 kg is not allowed.
+  --Deleting the root category (whose minimum weight is 0) is not allowed.
+  --Updating the min weight of the root category is not allowed.
+Other things to note:
+  --To define category weight ranges, only min weights of the categories are needed. (No need for max weight for each category)
+  --All the list componenets uses a grid (namely EasyGrid developed by me based on Material-UI data grid) support pagination.
+  
+HIGHLIGHTS
+-GenericRepository interfaces allows us to use different kinds of repositories in addition to DB-based ones.
+-All the repositories uses GenericRepository for CRUD, searching, sorting, pagination etc., which is why vehicle/manifacturer/category repository classes include almost no specific code
+-All the controllers in WebAPI uses a common controller which includes almost all the functionalty for post, put, get operations, which is why the code in the endpoint-controllers ( vehicles/manifacturers/categories) is very short.
+-React client project also benefits considerable amount of reusable code (see commonComponents, especially EasyGrid and entityGridPage)  
+-All the constraints mentioned above are checked both in front-end and back-end.
