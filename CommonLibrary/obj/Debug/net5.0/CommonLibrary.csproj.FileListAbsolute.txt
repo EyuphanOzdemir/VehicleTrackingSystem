@@ -1,0 +1,12 @@
+D:\EyuphanData\Repos\VehicleTrackingSystem\CommonLibrary\bin\Debug\net5.0\CommonLibrary.deps.json
+D:\EyuphanData\Repos\VehicleTrackingSystem\CommonLibrary\bin\Debug\net5.0\CommonLibrary.dll
+D:\EyuphanData\Repos\VehicleTrackingSystem\CommonLibrary\bin\Debug\net5.0\ref\CommonLibrary.dll
+D:\EyuphanData\Repos\VehicleTrackingSystem\CommonLibrary\bin\Debug\net5.0\CommonLibrary.pdb
+D:\EyuphanData\Repos\VehicleTrackingSystem\CommonLibrary\obj\Debug\net5.0\CommonLibrary.csprojAssemblyReference.cache
+D:\EyuphanData\Repos\VehicleTrackingSystem\CommonLibrary\obj\Debug\net5.0\CommonLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\EyuphanData\Repos\VehicleTrackingSystem\CommonLibrary\obj\Debug\net5.0\CommonLibrary.AssemblyInfoInputs.cache
+D:\EyuphanData\Repos\VehicleTrackingSystem\CommonLibrary\obj\Debug\net5.0\CommonLibrary.AssemblyInfo.cs
+D:\EyuphanData\Repos\VehicleTrackingSystem\CommonLibrary\obj\Debug\net5.0\CommonLibrary.csproj.CoreCompileInputs.cache
+D:\EyuphanData\Repos\VehicleTrackingSystem\CommonLibrary\obj\Debug\net5.0\CommonLibrary.dll
+D:\EyuphanData\Repos\VehicleTrackingSystem\CommonLibrary\obj\Debug\net5.0\ref\CommonLibrary.dll
+D:\EyuphanData\Repos\VehicleTrackingSystem\CommonLibrary\obj\Debug\net5.0\CommonLibrary.pdb
