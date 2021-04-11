@@ -5,7 +5,12 @@ CommonLibrary: The class library that includes common classes such as FileServic
 
 CoreEntity: The class library that includes BaseEntity, BaseNamedEntity classes and some generic interfaces and classes for repositories.
 
-SQLDBProject: It defines the DB schema for SQL Server. It needs to be published. SQLDBProject.publish.xml defines the connection string. I used local db with sa user. This may need to be changed. If changed, the connection string in SQLDBProject.publish.xml should be changed and the project should be published again. when published, postscript file automatically deletes all the existent records and creates 5 pre-defined categories and 6 manifactures. The DB schema includes all the required indexes and foreign keys, views, computed fields etc.
+SQLDBProject: It defines the DB schema for SQL Server. It needs to be published. 
+SQLDBProject.publish.xml defines the connection string. I used local db with sa user. 
+This may need to be changed. 
+If changed, the connection string in SQLDBProject.publish.xml should be changed and the project should be published again. 
+When published, postscript file automatically deletes all the existent records and creates 5 pre-defined categories and 6 manifactures. 
+The DB schema includes all the required indexes and foreign keys, views, computed fields etc.
 
 DBAccessLibrary: All the project-specific entity classes, corresponding DTO classes, automap settings etc. are defined here.
 
@@ -17,6 +22,11 @@ INSTALLATION
 -Open VehicleTrackingSystem.sln in Visual Studio 2019 or in a later version.
 -Build all the projects.
 -Create the database by publishing the SQLDBProject.
+On the publishing modal dialog, you can edit the connection string, and then publish.
+Alternatively, as mentioned, you can change change the connection string in SQLDBProject.publish.xml. and then load this file as the publish profile
+and then publish. After changing connection string here, you should also copy connection string and then replace the connection string 
+in appsettings of WebAPI project with the copied connection string.
+
 -Run the WebAPI project.
 -Open client folder in VS Code.
 -run "npm install" command in terminal.
