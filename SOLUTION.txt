@@ -33,8 +33,10 @@ WHAT THE CLIENT DOES
   --Updating the min weight of the root category is not allowed.
   --The category icon should be png/jpeg/etc. and should not exceed 1MB.
 Other things to note:
-  --To define category weight ranges, only min weights of the categories are needed. (No need for max weight for each category)
-  --All the list componenets uses a grid (namely EasyGrid developed by me based on Material-UI data grid) support pagination.
+  --To define category weight ranges, only min weights of the categories are needed. (No need for max weight for each category). 
+Max weights of categories are automatically determined and shown to the user in both list of categories and in edit view of categories. 
+
+  --All the list componenets uses a grid (namely EasyGrid developed by me based on Material-UI data grid) support server-side pagination.
   
 HIGHLIGHTS
 -GenericRepository interfaces allows us to use different kinds of repositories in addition to DB-based ones.
