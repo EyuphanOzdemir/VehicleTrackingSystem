@@ -26,7 +26,8 @@ On the publishing modal dialog, you can edit the connection string, and then pub
 Alternatively, as mentioned, you can change change the connection string in SQLDBProject.publish.xml. and then load this file as the publish profile
 and then publish. After changing connection string here, you should also copy connection string and then replace the connection string 
 in appsettings of WebAPI project with the copied connection string.
-
+As a last option, run the DBCreationScript.sql in your SQL Server. Create a connection string of your database, and use it in appsettings of WebAPI
+and also in SQLDBProject if needed.
 -Run the WebAPI project.
 -Open client folder in VS Code.
 -run "npm install" command in terminal.
